@@ -1,20 +1,28 @@
-/* Hero Section */
+.landing-page {
+    position: relative;
+    overflow: hidden;
+    /* Contains the glow locally to this page */
+}
+
 .hero {
     padding: 10rem 0 6rem;
     /* Expanded padding */
     position: relative;
     text-align: center;
-    overflow: hidden;
 }
 
 .hero-bg-glow {
     position: absolute;
-    top: -6.25rem;
+    top: -10em;
     left: 50%;
     transform: translateX(-50%);
-    width: 37.5rem;
-    height: 25rem;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    width: 100vw;
+    height: 50rem;
+    background: radial-gradient(
+        30em circle at center,
+        var(--accent-glow) 0%,
+        transparent 70%
+    );
     z-index: -1;
     pointer-events: none;
 }
@@ -157,10 +165,12 @@
 /* Divider */
 .divider {
     height: 1px;
-    background: linear-gradient(90deg,
-            transparent,
-            var(--border-color),
-            transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--border-color),
+        transparent
+    );
     margin: var(--space-xl) auto;
 }
 

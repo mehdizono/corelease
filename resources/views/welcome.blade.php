@@ -8,6 +8,8 @@
 
 @section('content')
 <div class="landing-page">
+    <div class="hero-bg-glow"></div>
+    
     <!-- Hero Section -->
     <header class="hero">
         <div class="container hero-content animate-fade-in">
@@ -42,8 +44,6 @@
                 </div>
             @endauth
         </div>
-
-        <div class="hero-bg-glow"></div>
     </header>
 
     <!-- Live Status Component -->
