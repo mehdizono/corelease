@@ -2,20 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Catalog;
+use App\Models\Resource;
 
 class CatalogController extends Controller
 {
-    public function index()
-
+    /**
+     * Display a listing of the resources for browsing.
+     */
+    public function browse()
     {
-       
-        
-        $Catalog = Catalog::allresources();
+        $resources = Resource::orderBy('category')->orderBy('name')->paginate(24);
 
-
-
-
-        return view('catalog.Catalog', ['Catalog' => $Catalog]);
+        return view('catalog.catalog', compact('resources'));
     }
 }

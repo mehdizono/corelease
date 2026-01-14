@@ -34,4 +34,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/apply', [AuthController::class, 'showRegister'])->name('register');
 Route::post('/apply', [AuthController::class, 'register']);
 Route::post('/check-status', [AuthController::class, 'checkStatus'])->name('status.check');
-Route::get('/Catalog', [CatalogController::class, 'index']);
+
+// Resource Catalog
+Route::get('/catalog', [CatalogController::class, 'browse'])->name('catalog.index');
