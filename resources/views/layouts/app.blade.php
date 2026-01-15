@@ -15,6 +15,20 @@
     <!-- CSS -->
     @vite(['resources/css/global.css', 'resources/css/layout.css', 'resources/css/ui.css'])
     @yield('styles')
+
+    <!-- Theme Initialization -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            const accent = JSON.parse(localStorage.getItem('accent'));
+            if (accent) {
+                document.documentElement.style.setProperty('--accent-h', accent.h);
+                document.documentElement.style.setProperty('--accent-s', accent.s + '%');
+                document.documentElement.style.setProperty('--accent-l', accent.l + '%');
+            }
+        })();
+    </script>
 </head>
 <body>
     <div id="app">

@@ -50,11 +50,9 @@ class ThemeManager {
 }
 
 window.themeManager = new ThemeManager();
-
-function toggleDarkMode() {
+window.toggleDarkMode = function () {
     window.themeManager.toggleTheme();
-}
-
-function setAccent(h, s, l) {
+};
+window.setAccent = function (h, s, l) {
     window.themeManager.applyAccent({ h, s, l });
-}
+};
